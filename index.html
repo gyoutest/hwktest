@@ -1,16 +1,43 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MY NAME IS WOONGKYU</title>
-  <link href='/style.css' rel='stylesheet'>
+  <title>뭐먹 | 저녁 메뉴 룰렛</title>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=SUIT:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="/style.css" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
+  <main class="app-shell">
+    <section class="hero-copy">
+      <p class="eyebrow">DINNER PICKER</p>
+      <h1>뭐먹</h1>
+      <p class="intro">
+        고민 길어질수록 배만 고파진다. 룰렛 한 번 돌리고 오늘 저녁 바로 정하자.
+      </p>
+
+      <div class="result-card" id="resultCard" aria-live="polite">
+        <span class="result-label">오늘의 추천</span>
+        <strong id="resultText">룰렛을 돌려 메뉴를 골라보세요</strong>
+      </div>
+
+      <button class="spin-button" id="spinButton" type="button">
+        돌려보기
+      </button>
+
+      <ul class="menu-list" id="menuList" aria-label="추천 메뉴 목록"></ul>
+    </section>
+
+    <section class="roulette-panel" aria-label="저녁 메뉴 룰렛">
+      <div class="roulette-pointer" aria-hidden="true"></div>
+      <div class="roulette-wheel" id="rouletteWheel">
+        <div class="wheel-center">
+          <span>오늘</span>
+          <strong>저녁</strong>
+        </div>
+      </div>
+    </section>
+  </main>
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>
-
-<!-- 안녕하세요 깃허브 푸시가 작동하는지 확인중입니다 -->
