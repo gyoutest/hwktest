@@ -3,14 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="머먹은 점심과 저녁 메뉴를 더 쉽게 정할 수 있도록 카테고리 선택, 최근 먹은 음식 제외, 세부 메뉴 룰렛을 제공하는 식사 결정 도우미입니다." />
   <meta name="google-adsense-account" content="ca-pub-7517294624033433" />
   <title>머먹 | 귀여운 점심 저녁 룰렛</title>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7517294624033433" crossorigin="anonymous"></script>
-  <link href="/style.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
   <main class="page">
     <section class="hero-card">
+      <div class="site-nav" aria-label="사이트 탐색">
+        <a class="nav-link" href="#serviceGuide">서비스 안내</a>
+        <a class="nav-link" href="#qualityNotes">운영 원칙</a>
+        <a class="nav-link" href="#faq">자주 묻는 질문</a>
+        <a class="nav-link" href="about.html">서비스 소개</a>
+        <a class="nav-link" href="contact.html">문의</a>
+        <a class="nav-link" href="privacy.html">개인정보처리방침</a>
+      </div>
       <div class="hero-copy">
         <p class="eyebrow">Lunch & Dinner Roulette</p>
         <h1>머먹</h1>
@@ -28,6 +37,12 @@
           <span class="theme-label">다크 모드</span>
         </button>
       </div>
+      <div class="hero-highlights" aria-label="서비스 핵심 특징">
+        <span class="highlight-pill">카테고리별 메뉴 추천</span>
+        <span class="highlight-pill">최근 먹은 메뉴 제외</span>
+        <span class="highlight-pill">직접 선택 + 룰렛 선택</span>
+        <span class="highlight-pill">모바일에서도 간단한 사용</span>
+      </div>
       <div class="guide-buddy">
         <div class="buddy-face" aria-hidden="true">
           <div class="buddy-eye left"></div>
@@ -38,6 +53,30 @@
           <strong>먹요정 머미</strong>
           <p id="buddyMessage">먼저 카테고리를 직접 고르거나 룰렛으로 정해봐!</p>
         </div>
+      </div>
+    </section>
+
+    <section id="serviceGuide" class="info-strip" aria-labelledby="serviceGuideTitle">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Guide</p>
+          <h2 id="serviceGuideTitle">머먹이 제공하는 것</h2>
+        </div>
+        <p class="section-copy">단순히 버튼만 있는 페이지가 아니라, 메뉴를 정하는 과정을 더 빠르고 덜 피곤하게 만들기 위한 실용 도구를 목표로 운영합니다.</p>
+      </div>
+      <div class="info-grid three-up">
+        <article class="info-card">
+          <h3>카테고리부터 좁히기</h3>
+          <p>한식, 중식, 일식, 양식, 치킨, 피자 등 큰 범주부터 정하면 선택 피로를 줄일 수 있습니다.</p>
+        </article>
+        <article class="info-card">
+          <h3>최근 먹은 메뉴 제외</h3>
+          <p>방금 질린 메뉴를 빼고 싶을 때 쉼표로 입력하면 세부 룰렛에서 자동으로 제외됩니다.</p>
+        </article>
+        <article class="info-card">
+          <h3>직접 선택도 가능</h3>
+          <p>룰렛만 강요하지 않습니다. 카테고리와 메뉴를 직접 눌러 결정하는 방식도 함께 제공합니다.</p>
+        </article>
       </div>
     </section>
 
@@ -121,6 +160,78 @@
       <button id="goEatButton" class="primary-button eat-button" type="button">먹으러가자!</button>
     </section>
 
+    <section id="qualityNotes" class="content-card" aria-labelledby="qualityTitle">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Quality</p>
+          <h2 id="qualityTitle">서비스 운영 원칙</h2>
+        </div>
+        <p class="section-copy">머먹은 광고보다 사용성을 먼저 고려하는 정적 웹 도구를 지향합니다. 페이지의 핵심 가치는 메뉴 선택 경험 그 자체에 있습니다.</p>
+      </div>
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>1. 중복 콘텐츠를 늘리지 않기</h3>
+          <p>비슷한 페이지를 여러 개 복제하기보다 한 사이트 안에서 기능과 안내를 정리해 제공합니다. 메인 페이지, 소개, 문의, 개인정보처리방침 페이지는 각각 역할이 다릅니다.</p>
+        </article>
+        <article class="info-card">
+          <h3>2. 사용자가 바로 이해할 수 있게 쓰기</h3>
+          <p>카테고리 선택, 최근 메뉴 제외, 세부 메뉴 결정이라는 흐름을 그대로 UI와 설명 문구에 반영했습니다. 불필요한 단계나 낚시성 문구를 넣지 않습니다.</p>
+        </article>
+        <article class="info-card">
+          <h3>3. 광고보다 콘텐츠와 기능 우선</h3>
+          <p>광고는 사이트의 보조 요소로 다루며, 핵심 버튼이나 결과 영역을 가리는 방식으로 배치하지 않는 것을 원칙으로 합니다.</p>
+        </article>
+        <article class="info-card">
+          <h3>4. 의견 수렴과 지속 수정</h3>
+          <p>사용자 피드백은 Disqus 댓글과 문의 폼으로 받고, 자주 요청되는 카테고리와 메뉴는 운영자가 검토 후 반영합니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-card" aria-labelledby="menuPrinciplesTitle">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Menu Data</p>
+          <h2 id="menuPrinciplesTitle">메뉴 구성 기준</h2>
+        </div>
+        <p class="section-copy">현재 목록은 직장인과 학생이 자주 찾는 대표 외식 카테고리를 중심으로 구성했습니다. 특정 브랜드 홍보보다는 실제 선택 상황에서 바로 쓸 수 있는 범용성을 우선합니다.</p>
+      </div>
+      <div class="bullet-grid">
+        <div class="bullet-card"><strong>대표성</strong><p>많은 사용자가 바로 이해할 수 있는 음식군 위주로 구성합니다.</p></div>
+        <div class="bullet-card"><strong>균형감</strong><p>한식, 분식, 건강식, 고기류, 배달 친화 메뉴를 고르게 섞습니다.</p></div>
+        <div class="bullet-card"><strong>수정 가능성</strong><p>오류 제보나 누락 제안이 들어오면 검토 후 업데이트합니다.</p></div>
+        <div class="bullet-card"><strong>사용 편의</strong><p>최근 먹은 메뉴를 제외하는 기능으로 반복 선택을 줄입니다.</p></div>
+      </div>
+    </section>
+
+    <section id="faq" class="content-card" aria-labelledby="faqTitle">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faqTitle">자주 묻는 질문</h2>
+        </div>
+        <p class="section-copy">서비스 사용 전후로 자주 나올 수 있는 질문을 정리했습니다.</p>
+      </div>
+      <div class="faq-grid">
+        <article class="faq-item">
+          <h3>머먹은 무엇을 위한 사이트인가요?</h3>
+          <p>점심이나 저녁 메뉴를 빠르게 정하고 싶은 사용자를 위한 식사 결정 도우미입니다. 룰렛 방식과 직접 선택 방식을 함께 제공합니다.</p>
+        </article>
+        <article class="faq-item">
+          <h3>결과가 광고 때문에 바뀌나요?</h3>
+          <p>아니요. 현재 메뉴 결과는 페이지 내 고정 데이터와 랜덤 선택 로직을 기준으로 계산되며 광고 노출과 연결되지 않습니다.</p>
+        </article>
+        <article class="faq-item">
+          <h3>개인정보를 수집하나요?</h3>
+          <p>기본적인 메뉴 선택 기능은 별도 회원가입 없이 사용할 수 있습니다. 다만 문의 폼, Disqus 댓글, 광고 도구는 각 서비스의 처리 방식에 따라 일부 정보를 다룰 수 있습니다. 자세한 내용은 개인정보처리방침에서 안내합니다.</p>
+        </article>
+        <article class="faq-item">
+          <h3>메뉴나 카테고리 추가 요청은 어디서 하나요?</h3>
+          <p>상단 문의 버튼이나 별도 문의 페이지를 통해 제안할 수 있습니다. 요청이 많고 서비스 목적에 맞는 항목부터 검토합니다.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="comment-card" aria-labelledby="commentTitle">
       <div class="comment-head">
         <div>
@@ -137,36 +248,58 @@
         </noscript>
       </div>
     </section>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <section>
+          <p class="eyebrow">머먹</p>
+          <p class="footer-copy">머먹은 식사 선택 피로를 줄이기 위해 만든 정적 웹 서비스입니다. 기능 개선과 운영 기준 보강을 지속적으로 진행합니다.</p>
+        </section>
+        <section>
+          <p class="eyebrow">바로가기</p>
+          <div class="footer-links">
+            <a href="about.html">서비스 소개</a>
+            <a href="contact.html">문의하기</a>
+            <a href="privacy.html">개인정보처리방침</a>
+          </div>
+        </section>
+        <section>
+          <p class="eyebrow">운영 안내</p>
+          <p class="footer-copy">광고는 사용자 경험을 해치지 않는 범위에서만 다루며, 댓글과 문의를 통해 받은 의견은 서비스 개선 참고 자료로 활용됩니다.</p>
+        </section>
+      </div>
+      <p class="footer-meta">Last updated: 2026-04-02 UTC</p>
+    </footer>
   </main>
 
-    <dialog id="contactDialog" class="contact-dialog">
-      <form class="contact-form" action="https://formspree.io/f/xvzvbovq" method="POST" target="_blank">
-        <div class="contact-head">
-          <div>
-            <p class="eyebrow">Contact</p>
-            <h3>문의하기</h3>
-          </div>
-          <button id="contactClose" class="contact-close" type="button" aria-label="문의 닫기">닫기</button>
+  <dialog id="contactDialog" class="contact-dialog">
+    <form class="contact-form" action="https://formspree.io/f/xvzvbovq" method="POST" target="_blank">
+      <div class="contact-head">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h3>문의하기</h3>
         </div>
-        <p class="contact-help">추가 희망 메뉴나 카테고리, 오류 제보, 기타 문의사항을 남겨줘.</p>
-        <label class="contact-label" for="contactType">문의 유형</label>
-        <select id="contactType" class="contact-input" name="문의 유형" required>
-          <option value="추가 희망하는 카테고리 또는 메뉴">추가 희망하는 카테고리 또는 메뉴</option>
-          <option value="오류 제보">오류 제보</option>
-          <option value="기타 문의사항">기타 문의사항</option>
-        </select>
-        <label class="contact-label" for="contactEmail">답변받을 이메일</label>
-        <input id="contactEmail" class="contact-input" type="email" name="email" placeholder="name@example.com" />
-        <label class="contact-label" for="contactMessage">문의 내용</label>
-        <textarea id="contactMessage" class="contact-input contact-textarea" name="message" placeholder="원하는 카테고리나 메뉴, 발견한 오류, 기타 의견을 적어줘." required></textarea>
-        <input type="hidden" name="서비스" value="머먹" />
-        <div class="contact-actions">
-          <button class="primary-button" type="submit">Formspree로 보내기</button>
-          <button id="contactCancel" class="secondary-button" type="button">취소</button>
-        </div>
-      </form>
-    </dialog>
+        <button id="contactClose" class="contact-close" type="button" aria-label="문의 닫기">닫기</button>
+      </div>
+      <p class="contact-help">추가 희망 메뉴나 카테고리, 오류 제보, 기타 문의사항을 남겨줘.</p>
+      <label class="contact-label" for="contactType">문의 유형</label>
+      <select id="contactType" class="contact-input" name="문의 유형" required>
+        <option value="추가 희망하는 카테고리 또는 메뉴">추가 희망하는 카테고리 또는 메뉴</option>
+        <option value="오류 제보">오류 제보</option>
+        <option value="기타 문의사항">기타 문의사항</option>
+      </select>
+      <label class="contact-label" for="contactEmail">답변받을 이메일</label>
+      <input id="contactEmail" class="contact-input" type="email" name="email" placeholder="name@example.com" />
+      <label class="contact-label" for="contactMessage">문의 내용</label>
+      <textarea id="contactMessage" class="contact-input contact-textarea" name="message" placeholder="원하는 카테고리나 메뉴, 발견한 오류, 기타 의견을 적어줘." required></textarea>
+      <input type="hidden" name="서비스" value="머먹" />
+      <div class="contact-actions">
+        <button class="primary-button" type="submit">Formspree로 보내기</button>
+        <button id="contactCancel" class="secondary-button" type="button">취소</button>
+      </div>
+    </form>
+  </dialog>
 
-  <script defer type="text/javascript" src="/main.js"></script>
+  <script defer type="text/javascript" src="main.js"></script>
 </body>
 </html>

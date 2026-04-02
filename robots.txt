@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gyoutest.github.io/hwktest/sitemap.xml
