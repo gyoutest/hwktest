@@ -3,13 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>안녕하세요</title>
+  <title>머먹 | 귀여운 점심 저녁 룰렛</title>
   <link href="/style.css" rel="stylesheet">
 </head>
 <body>
   <main class="page">
-    <h1>안녕하세요 반가워요</h1>
+    <section class="hero-card">
+      <div class="hero-copy">
+        <p class="eyebrow">Lunch & Dinner Roulette</p>
+        <h1>머먹</h1>
+        <p class="intro">
+          고민 많은 식사시간, 내가 대신 골라줄게. 카테고리를 먼저 정하고,
+          마음에 안 드는 최근 메뉴는 빼고, 룰렛으로 오늘의 한 끼를 결정하자.
+        </p>
+      </div>
+      <div class="top-actions">
+        <button id="contactToggle" class="theme-toggle contact-toggle" type="button" aria-label="문의하기">
+          <span>문의</span>
+        </button>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="테마 전환">
+          <span class="theme-icon">🌙</span>
+          <span class="theme-label">다크 모드</span>
+        </button>
+      </div>
+      <div class="guide-buddy">
+        <div class="buddy-face" aria-hidden="true">
+          <div class="buddy-eye left"></div>
+          <div class="buddy-eye right"></div>
+          <div class="buddy-mouth"></div>
+        </div>
+        <div class="buddy-speech">
+          <strong>먹요정 머미</strong>
+          <p id="buddyMessage">먼저 카테고리를 직접 고르거나 룰렛으로 정해봐!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-grid">
+      <aside class="control-panel">
+        <div class="panel-block">
+          <h2>1. 카테고리 선택</h2>
+          <div id="categoryList" class="option-list" aria-label="카테고리 목록"></div>
+        </div>
+
+        <div class="panel-block">
+          <h2>2. 최근 먹은 음식 제외</h2>
+          <label class="field-label" for="recentInput">쉼표로 여러 개 입력 가능</label>
+          <textarea
+            id="recentInput"
+            class="recent-input"
+            placeholder="예: 짜장면, 초밥, 떡볶이"
+          ></textarea>
+          <p class="field-help">입력한 음식은 자동으로 세부 룰렛에서 제외돼.</p>
+        </div>
+
+        <div class="panel-block">
+          <h2>3. 세부 메뉴 선택</h2>
+          <div class="selection-status">
+            <span>선택된 카테고리</span>
+            <strong id="selectedCategoryName">아직 없음</strong>
+          </div>
+          <div id="menuList" class="option-list menu-list" aria-label="메뉴 목록"></div>
+        </div>
+      </aside>
+
+      <section class="roulette-panel">
+        <div class="roulette-stage">
+          <div class="roulette-header">
+            <div>
+              <p class="eyebrow">Spin To Decide</p>
+              <h2 id="rouletteTitle">카테고리 룰렛</h2>
+            </div>
+            <div class="roulette-badge" id="rouletteModeBadge">Category</div>
+          </div>
+
+          <div class="roulette-shell">
+            <div class="roulette-pointer" aria-hidden="true"></div>
+            <div id="wheel" class="wheel"></div>
+            <div class="wheel-center">
+              <span id="wheelCenterLabel">카테고리</span>
+            </div>
+          </div>
+
+          <div class="roulette-actions">
+            <button id="spinCategoryButton" class="primary-button" type="button">카테고리 룰렛 돌리기</button>
+            <button id="spinMenuButton" class="primary-button" type="button" disabled>메뉴 룰렛 돌리기</button>
+            <button id="resetButton" class="secondary-button" type="button">처음부터 다시</button>
+          </div>
+        </div>
+
+        <aside class="manual-card">
+          <h3>사용설명서</h3>
+          <ol>
+            <li>카테고리를 직접 누르거나 룰렛 버튼으로 정해.</li>
+            <li>최근 먹어서 질린 메뉴를 입력해 제외해.</li>
+            <li>세부 메뉴 룰렛을 돌려 오늘의 메뉴를 확정해.</li>
+            <li>결과 박스가 뜨면 버튼을 눌러 다음 기능으로 이어갈 수 있어.</li>
+          </ol>
+        </aside>
+      </section>
+    </section>
+
+    <section id="resultCard" class="result-card" aria-live="polite" hidden>
+      <div class="celebration" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <p class="result-label">오늘의 결정</p>
+      <h2 id="resultText">오늘 저녁은 OO이다!</h2>
+      <p id="resultSubtext" class="result-subtext"></p>
+      <button id="goEatButton" class="primary-button eat-button" type="button">먹으러가자!</button>
+    </section>
   </main>
+
+    <dialog id="contactDialog" class="contact-dialog">
+      <form class="contact-form" action="https://formspree.io/f/xvzvbovq" method="POST" target="_blank">
+        <div class="contact-head">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h3>문의하기</h3>
+          </div>
+          <button id="contactClose" class="contact-close" type="button" aria-label="문의 닫기">닫기</button>
+        </div>
+        <p class="contact-help">추가 희망 메뉴나 카테고리, 오류 제보, 기타 문의사항을 남겨줘.</p>
+        <label class="contact-label" for="contactType">문의 유형</label>
+        <select id="contactType" class="contact-input" name="문의 유형" required>
+          <option value="추가 희망하는 카테고리 또는 메뉴">추가 희망하는 카테고리 또는 메뉴</option>
+          <option value="오류 제보">오류 제보</option>
+          <option value="기타 문의사항">기타 문의사항</option>
+        </select>
+        <label class="contact-label" for="contactEmail">답변받을 이메일</label>
+        <input id="contactEmail" class="contact-input" type="email" name="email" placeholder="name@example.com" />
+        <label class="contact-label" for="contactMessage">문의 내용</label>
+        <textarea id="contactMessage" class="contact-input contact-textarea" name="message" placeholder="원하는 카테고리나 메뉴, 발견한 오류, 기타 의견을 적어줘." required></textarea>
+        <input type="hidden" name="서비스" value="머먹" />
+        <div class="contact-actions">
+          <button class="primary-button" type="submit">Formspree로 보내기</button>
+          <button id="contactCancel" class="secondary-button" type="button">취소</button>
+        </div>
+      </form>
+    </dialog>
+
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>
