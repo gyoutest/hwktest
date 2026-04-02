@@ -494,6 +494,29 @@ function spinWheel() {
   }, 5000);
 }
 
+function loadDisqus() {
+  if (document.querySelector("#disqus_thread") === null) {
+    return;
+  }
+
+  window.disqus_config = function () {
+    const canonicalUrl = new URL(window.location.pathname, window.location.origin);
+    this.page.url = canonicalUrl.toString();
+    this.page.identifier = window.location.pathname || "/";
+    this.language = "ko";
+  };
+
+  if (document.querySelector('script[src="https://hwktest.disqus.com/embed.js"]')) {
+    return;
+  }
+
+  const script = document.createElement("script");
+  script.src = "https://hwktest.disqus.com/embed.js";
+  script.setAttribute("data-timestamp", String(Date.now()));
+  script.async = true;
+  document.body.append(script);
+}
+
 function resetApp() {
   state.mode = "category";
   state.selectedCategory = null;
@@ -576,3 +599,4 @@ updateThemeButton();
 renderCategoryList();
 renderMenuList();
 updateWheel();
+loadDisqus();
